@@ -37,6 +37,149 @@
 </div>
 
 
+<h3>프로젝트 구조</h3>
+<hr>
+
+```
+📦com
+ ┗ 📂jangbogo
+ ┃ ┣ 📂advice
+ ┃ ┃ ┣ 📂assertThat
+ ┃ ┃ ┃ ┗ 📜DefaultAssert.java
+ ┃ ┃ ┣ 📂error
+ ┃ ┃ ┃ ┣ 📜DefaultAuthenticationException.java
+ ┃ ┃ ┃ ┣ 📜DefaultException.java
+ ┃ ┃ ┃ ┣ 📜DefaultNullPointerException.java
+ ┃ ┃ ┃ ┗ 📜InvalidParameterException.java
+ ┃ ┃ ┣ 📂payload
+ ┃ ┃ ┃ ┣ 📜ErrorCode.java
+ ┃ ┃ ┃ ┗ 📜ErrorResponse.java
+ ┃ ┃ ┣ 📜ApiControllerAdvice.java
+ ┃ ┃ ┗ 📜MemberNotFoundException.java
+ ┃ ┣ 📂config
+ ┃ ┃ ┣ 📂handler
+ ┃ ┃ ┃ ┣ 📜CustomSimpleUrlAuthenticationFailureHandler.java
+ ┃ ┃ ┃ ┗ 📜CustomSimpleUrlAuthenticationSuccessHandler.java
+ ┃ ┃ ┣ 📂security
+ ┃ ┃ ┃ ┣ 📂auth
+ ┃ ┃ ┃ ┃ ┣ 📂company
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜Kakao.java
+ ┃ ┃ ┃ ┃ ┃ ┗ 📜Naver.java
+ ┃ ┃ ┃ ┃ ┣ 📜Oauth2UserInfo.java
+ ┃ ┃ ┃ ┃ ┗ 📜Oauth2UserInfoFactory.java
+ ┃ ┃ ┃ ┣ 📂docs
+ ┃ ┃ ┃ ┃ ┗ 📜OpenApiConfig.java
+ ┃ ┃ ┃ ┣ 📂token
+ ┃ ┃ ┃ ┃ ┣ 📜CurrentUser.java
+ ┃ ┃ ┃ ┃ ┣ 📜CustomAuthenticationEntryPoint.java
+ ┃ ┃ ┃ ┃ ┣ 📜CustomOncePerRequestFilter.java
+ ┃ ┃ ┃ ┃ ┗ 📜UserPrincipal.java
+ ┃ ┃ ┃ ┣ 📂util
+ ┃ ┃ ┃ ┃ ┗ 📜CustomCookie.java
+ ┃ ┃ ┃ ┣ 📜OAuth2Config.java
+ ┃ ┃ ┃ ┣ 📜SecurityConfig.java
+ ┃ ┃ ┃ ┗ 📜WebMvcConfig.java
+ ┃ ┃ ┗ 📜AuditConfig.java
+ ┃ ┣ 📂constant
+ ┃ ┃ ┗ 📜Role.java
+ ┃ ┣ 📂controller
+ ┃ ┃ ┣ 📜AnswerController.java
+ ┃ ┃ ┣ 📜AuthController.java
+ ┃ ┃ ┣ 📜MessageController.java
+ ┃ ┃ ┣ 📜PriceController.java
+ ┃ ┃ ┣ 📜PriceInfoController.java
+ ┃ ┃ ┣ 📜QuestionController.java
+ ┃ ┃ ┣ 📜SearchRequestController.java
+ ┃ ┃ ┗ 📜ZzimController.java
+ ┃ ┣ 📂domain
+ ┃ ┃ ┣ 📂Board
+ ┃ ┃ ┃ ┣ 📜Answer.java
+ ┃ ┃ ┃ ┣ 📜Board.java
+ ┃ ┃ ┃ ┗ 📜Question.java
+ ┃ ┃ ┣ 📂common
+ ┃ ┃ ┃ ┣ 📜BaseEntity.java
+ ┃ ┃ ┃ ┗ 📜BaseTimeEntity.java
+ ┃ ┃ ┣ 📂member
+ ┃ ┃ ┃ ┣ 📂entity
+ ┃ ┃ ┃ ┃ ┣ 📜Member.java
+ ┃ ┃ ┃ ┃ ┣ 📜Provider.java
+ ┃ ┃ ┃ ┃ ┣ 📜Role.java
+ ┃ ┃ ┃ ┃ ┗ 📜Token.java
+ ┃ ┃ ┃ ┗ 📂mapping
+ ┃ ┃ ┃ ┃ ┗ 📜TokenMapping.java
+ ┃ ┃ ┣ 📂product
+ ┃ ┃ ┃ ┣ 📜Product.java
+ ┃ ┃ ┃ ┗ 📜Zzim.java
+ ┃ ┃ ┣ 📜DirectMessage.java
+ ┃ ┃ ┣ 📜Favorite.java
+ ┃ ┃ ┗ 📜PriceInfo.java
+ ┃ ┣ 📂dto
+ ┃ ┃ ┣ 📜AnswerDto.java
+ ┃ ┃ ┣ 📜ItemDto.java
+ ┃ ┃ ┣ 📜PriceDto.java
+ ┃ ┃ ┣ 📜PriceInfoDTO.java
+ ┃ ┃ ┣ 📜ProductRequestDto.java
+ ┃ ┃ ┣ 📜QuestionDto.java
+ ┃ ┃ ┗ 📜ZzimDto.java
+ ┃ ┣ 📂exeption
+ ┃ ┃ ┣ 📜DataNotFoundException.java
+ ┃ ┃ ┣ 📜MemberNotEqualsException.java
+ ┃ ┃ ┣ 📜MemberNotFoundException.java
+ ┃ ┃ ┗ 📜MessageNotFoundException.java
+ ┃ ┣ 📂payload
+ ┃ ┃ ┣ 📂request
+ ┃ ┃ ┃ ┣ 📂auth
+ ┃ ┃ ┃ ┃ ┣ 📜ChangePasswordRequest.java
+ ┃ ┃ ┃ ┃ ┣ 📜RefreshTokenRequest.java
+ ┃ ┃ ┃ ┃ ┣ 📜SignInRequest.java
+ ┃ ┃ ┃ ┃ ┣ 📜SignUpRequest.java
+ ┃ ┃ ┃ ┃ ┗ 📜UpdateRequest.java
+ ┃ ┃ ┃ ┗ 📂message
+ ┃ ┃ ┃ ┃ ┣ 📜MessageCreateRequest.java
+ ┃ ┃ ┃ ┃ ┗ 📜MessageDto.java
+ ┃ ┃ ┗ 📂response
+ ┃ ┃ ┃ ┣ 📂DM
+ ┃ ┃ ┃ ┃ ┣ 📜Failure.java
+ ┃ ┃ ┃ ┃ ┣ 📜Response.java
+ ┃ ┃ ┃ ┃ ┣ 📜Result.java
+ ┃ ┃ ┃ ┃ ┗ 📜Success.java
+ ┃ ┃ ┃ ┣ 📜ApiResponse.java
+ ┃ ┃ ┃ ┣ 📜AuthResponse.java
+ ┃ ┃ ┃ ┣ 📜MailResponse.java
+ ┃ ┃ ┃ ┗ 📜Message.java
+ ┃ ┣ 📂repository
+ ┃ ┃ ┣ 📂auth
+ ┃ ┃ ┃ ┣ 📜CustomAuthorizationRequestRepository.java
+ ┃ ┃ ┃ ┗ 📜TokenRepository.java
+ ┃ ┃ ┣ 📜AnswerRepository.java
+ ┃ ┃ ┣ 📜BoardRepository.java
+ ┃ ┃ ┣ 📜MemberRepository.java
+ ┃ ┃ ┣ 📜MessageRepository.java
+ ┃ ┃ ┣ 📜PriceInfoRepository.java
+ ┃ ┃ ┣ 📜ProductRepository.java
+ ┃ ┃ ┣ 📜QuestionRepository.java
+ ┃ ┃ ┗ 📜ZzimRepository.java
+ ┃ ┣ 📂service
+ ┃ ┃ ┣ 📂auth
+ ┃ ┃ ┃ ┣ 📜AuthService.java
+ ┃ ┃ ┃ ┣ 📜CustomDefaultOAuth2UserService.java
+ ┃ ┃ ┃ ┣ 📜CustomTokenProviderService.java
+ ┃ ┃ ┃ ┗ 📜CustomUserDetailsService.java
+ ┃ ┃ ┣ 📜AnswerService.java
+ ┃ ┃ ┣ 📜FileService.java
+ ┃ ┃ ┣ 📜MailService.java
+ ┃ ┃ ┣ 📜MemberService.java
+ ┃ ┃ ┣ 📜MessageService.java
+ ┃ ┃ ┣ 📜PriceInfoService.java
+ ┃ ┃ ┣ 📜QuestionService.java
+ ┃ ┃ ┗ 📜ZzimService.java
+ ┃ ┣ 📂util
+ ┃ ┃ ┣ 📜NaverShopSearch.java
+ ┃ ┃ ┗ 📜PriceInfoJsonParser.java
+ ┃ ┗ 📜JangbogoApplication.java
+
+```
+
 <h3>역할 분담</h3>
 <hr>
 
