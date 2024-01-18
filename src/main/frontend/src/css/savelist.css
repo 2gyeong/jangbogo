@@ -1,0 +1,120 @@
+*{
+  word-break: keep-all;
+}
+
+.save-item{
+  width: 260px;
+  border:1px solid gainsboro;
+  border-radius: 8px;
+  align-items: center;
+  justify-content:center;
+  padding: 20px;
+  border-bottom: 1px solid gainsboro;
+  cursor: pointer;
+}
+
+.save-item-left{ 
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+
+}
+.save-item-left img{
+  width:150px;
+  height: 150px;
+  border-radius: 5px;
+  padding:20px;
+
+  
+}
+.checkbox{
+  float:left; 
+  width:30px;
+}
+.img{
+  padding-left:40px;
+}
+.save-item-info {
+  width:250px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  justify-content: space-around;
+  cursor: pointer;
+}
+.fav-mallName{
+  color:#ED712E;
+  font-weight: bold;
+}
+
+.fav-title{
+  height: 45px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  color:black;
+}
+
+.fav-price {
+  height: 30px;
+  font-size: 30px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: -0.54px;
+  text-align: left;
+  color: #E8344E;
+}
+
+.save-item-info span.unit {
+  width: 17px;
+  height: 18px;
+  font-size: 18px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: -0.9px;
+  text-align: center;
+  color: #000000;
+}
+
+.deletebtn{
+  cursor: pointer;
+}
+.save-item-right {
+  display: flex;
+  align-items: center;
+ 
+}
+input[type="checkbox"] {
+  width: 1.3rem;
+  height: 1.3rem;
+  border-radius: 50%;
+  border: 1px solid #999;
+  appearance: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+input[type="checkbox"]:checked {
+  background: #ED712E;
+  border: none;
+}
+
+.delete > button {
+  padding: 10px 20px;
+  font-weight: bold;
+  background-color: tomato;
+  color: white;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+.save-container {
+  margin-right: 30px;
+}

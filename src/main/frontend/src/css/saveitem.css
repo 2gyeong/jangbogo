@@ -1,0 +1,27 @@
+.zzim-wrap {
+  width: 1000px;
+  margin: 30px auto;
+  padding-top: 20px;
+}
+
+.savelist-top{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.countItem{
+  font-size: 40px;
+}
+.listline{
+  width:90%;
+  margin:0 auto;
+  padding: 10px;
+  border-bottom:3px solid black;
+}
+
+.zzimlist-wrap {
+  display: flex;
+  flex-direction: row;
+  
+}
